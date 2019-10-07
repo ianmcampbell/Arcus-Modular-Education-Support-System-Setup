@@ -1,0 +1,22 @@
+---
+title: "R Basics"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction to R
+
+It looks like you are just starting out with R and RStudio. I’ve created a curriculum for you that takes you from basic R syntax all the way to visual representations of your data and beyond. By following the steps outlined below, you can become very good at syntactical rules that are consistent no matter what you do down the line.
+
+1.	Please inspect your packet. It contains Hadley Wickham’s [seminal article](https://vita.had.co.nz/papers/tidy-data.pdf) about “tidy data” (a concept that is at the heart of good coding in R), which you can read at your leisure, and numerous cheat sheets that are loosely arranged from least to most advanced, to which you can refer as you follow the instructions below.
+
+2.	Open RStudio and follow along as you watch [Customizing RStudio](https://storage.googleapis.com/braunsb-media/Quick R Help/Customizing RStudio.mp4) (below). I have assumed that the viewer knows nothing about R and RStudio except how to launch RStudio. Go ahead and set up RStudio as you like.
+
+<center><video width="80%" controls>
+  <source src="https://storage.googleapis.com/braunsb-media/Quick R Help/Customizing RStudio.mp4" type="video/mp4">
+</video></center>
+
+Having completed these steps, you are ready to start coding. There are two alternatives here for learning R basics. Please use whichever works best for you. The first one has accompanying videos for many of the lessons. They go fast and can be helpful at anchoring concepts in your mind—especially if you are a visual learner.

@@ -1,0 +1,13 @@
+---
+title: "Statistics"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Statistics in R
+It sounds like you are somewhat familiar with R and RStudio but want to become more adept at statistics. I’ve created a curriculum for you that takes you through some statistical tests, their appicability and how to carry them out in R.  
+1.	Please inspect your packet. It contains Hadley Wickham’s [seminal article](https://vita.had.co.nz/papers/tidy-data.pdf) about “tidy data” (a concept that is at the heart of good coding in R), which you can read at your leisure, and numerous cheat sheets that are loosely arranged from least to most advanced, to which you can refer as you follow the instructions below.  
+2. Download a copy of John McDonald's [Handbook of Biologic Statistics](http://www.biostathandbook.com/HandbookBioStatThird.pdf). This is an excellent resource to refer to when you need more background on a specific subject. 

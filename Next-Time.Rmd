@@ -1,0 +1,21 @@
+---
+title: "Next Time"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# For Next Time
+
+For next time, please ask yourself precisely how you will be using R in your workflow and, when you register, enter the specific things you need to know to be able to accomplish your goals.  
+And finally, if you haven’t already, consider joining the CHOP R User Group, where you will find cookies (the edible ones), coffee, conversations, presentations, and help with your code. We have a newsletter to announce upcoming gatherings (usually held semimonthly) and an active slack user group.  
+<center>
+```{r, out.width = "400px", echo = FALSE}
+knitr::include_graphics("www/chop-r.gif")
+```
+</center>
+```{r,echo = FALSE, out.width = "100%"}
+knitr::include_graphics("www/footer.png")
+```
