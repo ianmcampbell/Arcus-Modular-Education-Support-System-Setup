@@ -29,10 +29,15 @@ firewall-cmd --reload
 # Allow nginx network access for redirect
 setsebool -P httpd_can_network_connect 1
 
+# Download config file from Github
+cd /etc/nginx
+curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Support-System-Setup/tar.gz/master | tar -xz --strip=1 Arcus-Modular-Education-Support-System-Setup-master/nginx.conf
+
 # Install required R packages
 sudo R -e "install.packages(c('shiny', 'rmarkdown', 'devtools', 'RJDBC','learnr', 'dplyr', 'data.table','RCurl','htmlwidgets', 'pwr', 'rcompanion', 'FSA','shinyjqui'), dependencies = TRUE, repos='http://cran.rstudio.com/')"
 
 #Download and install shiny-server
+cd ~
 wget https://download3.rstudio.org/centos6.3/x86_64/shiny-server-1.5.9.923-x86_64.rpm
 sudo yum -y install --nogpgcheck shiny-server-1.5.9.923-x86_64.rpm
 sudo systemctl start shiny-server
