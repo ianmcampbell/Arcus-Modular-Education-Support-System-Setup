@@ -55,11 +55,12 @@ curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Support-Sy
 #Download Lesson Generator from Github
 curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Support-System/tar.gz/master | tar -xz --strip=1 Arcus-Modular-Education-Support-System-master/Lesson-Generator
 
-#Download all Lessons from Github
-curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Support-System-Lessons/tar.gz/master | tar -xz --strip=2 Arcus-Modular-Education-Support-System-Lessons-master/Lessons
+#Download all Lessons and ModuleTable from Github
+#curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Support-System-Lessons/tar.gz/master | tar -xz --strip=2 Arcus-Modular-Education-Support-System-Lessons-master/Lessons
+curl https://codeload.github.com/braunsb/Lessons/tar.gz/master | tar -xz --strip=1 Lessons-master/
 
 #Download the Curricula and Module Tables from Github
-curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Support-System-Lessons/tar.gz/master | tar -xz --strip=1 Arcus-Modular-Education-Support-System-Lessons-master/ModuleTable.csv
+#curl https://codeload.github.com/braunsb/Lessons/tar.gz/master | tar -xz --strip=1 Lessons-master/
 curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Support-System-Lessons/tar.gz/master | tar -xz --strip=1 Arcus-Modular-Education-Support-System-Lessons-master/CurriculaTable.csv
 
 #Synlink the tables into the apps
