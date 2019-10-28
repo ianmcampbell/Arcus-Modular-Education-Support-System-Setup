@@ -61,15 +61,13 @@ curl https://codeload.github.com/braunsb/Lessons/tar.gz/master | tar -xz --strip
 
 #Download the Curricula and Module Tables from Github
 #curl https://codeload.github.com/braunsb/Lessons/tar.gz/master | tar -xz --strip=1 Lessons-master/
-curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Support-System-Lessons/tar.gz/master | tar -xz --strip=1 Arcus-Modular-Education-Support-System-Lessons-master/CurriculaTable.csv
+curl https://codeload.github.com/ianmcampbell/Curricula/tar.gz/master | tar -xz --strip=1 Curricula-master/CurriculaTable.csv
 
 #Synlink the tables into the apps
-cd /srv/shiny-server/Personalized-Learning-Plan/
-ln -s /srv/shiny-server/CurriculaTable.csv
-ln -s /srv/shiny-server/ModuleTable.csv
-cd /srv/shiny-server/Lesson-Generator/
-ln -s /srv/shiny-server/CurriculaTable.csv
-ln -s /srv/shiny-server/ModuleTable.csv
+ln -s /srv/shiny-server/CurriculaTable.csv /srv/shiny-server/Personalized-Learning-Plan/CurriculaTable.csv
+ln -s /srv/shiny-server/ModuleTable.csv /srv/shiny-server/Personalized-Learning-Plan/ModuleTable.csv
+ln -s /srv/shiny-server/CurriculaTable.csv /srv/shiny-server/Lesson-Generator/CurriculaTable.csv
+ln -s /srv/shiny-server/ModuleTable.csv  /srv/shiny-server/Lesson-Generator/ModuleTable.csv
 
 #Finalize file permissions
 sudo chown -R shiny:shiny /srv/shiny-server/
