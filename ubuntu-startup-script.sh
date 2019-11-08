@@ -39,7 +39,7 @@ systemctl restart nginx.service
 
 # Install required R packages
 #sudo R -e "install.packages(c('shiny', 'rmarkdown', 'devtools', 'RJDBC','learnr', 'dplyr', 'data.table','RCurl','htmlwidgets', 'pwr', 'rcompanion', 'FSA','shinyjqui'), dependencies = TRUE, repos='http://cran.rstudio.com/')"
-sudo R -e "install.packages(c('shiny', 'rmarkdown', 'devtools', 'RJDBC','learnr', 'dplyr', 'data.table','RCurl','htmlwidgets', 'pwr', 'rcompanion','shinyjqui'), dependencies = TRUE, repos='http://cran.rstudio.com/')"
+sudo R -e "install.packages(c('shiny', 'rmarkdown', 'devtools', 'RJDBC','learnr', 'dplyr', 'data.table','RCurl','htmlwidgets', 'pwr', 'rcompanion','shinyjqui','FSA','coin','readr'), dependencies = TRUE, repos='http://cran.rstudio.com/')"
 
 #Download and install shiny-server
 cd ~
