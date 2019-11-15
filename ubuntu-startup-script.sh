@@ -61,26 +61,32 @@ curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Support-Sy
 #Download Lesson Generator from Github
 curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Support-System/tar.gz/master | tar -C /srv/shiny-server/ -xz --strip=1 Arcus-Modular-Education-Support-System-master/Lesson-Generator
 
-#Download List Inedex App from Github
+#Download List Index App from Github
 curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Support-System/tar.gz/master | tar -C /srv/shiny-server/ -xz --strip=1 Arcus-Modular-Education-Support-System-master/list
 
-#Download all Lessons and ModuleTable from Github
+#Download Table Update App from Github
+curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Support-System/tar.gz/master | tar -C /srv/shiny-server/ -xz --strip=1 Arcus-Modular-Education-Support-System-master/TableUpdater
+
+
+#Download all Lessons from Github
 curl https://codeload.github.com/braunsb/Lessons/tar.gz/master | tar -C /srv/shiny-server/ -xz --strip=1 Lessons-master/
 
 #Download the Curricula and Module Tables from Github
 #curl https://codeload.github.com/braunsb/Lessons/tar.gz/master | tar -C /srv/shiny-server/ -xz --strip=1 Lessons-master/ModuleTable.csv
 curl https://codeload.github.com/ianmcampbell/Curricula/tar.gz/master | tar -C /srv/shiny-server/ -xz --strip=1 Curricula-master/CurriculaTable.csv
+cd /srv/shiny-server/
+git clone git@github.com:ianmcampbell/ModuleTable.git
 
 #Download the Curricula from Github
 curl https://codeload.github.com/ianmcampbell/Curricula/tar.gz/master | tar -C /srv/shiny-server/Personalized-Learning-Plan/curricula/ -xz --strip=1 Curricula-master/
 
 #Synlink the tables into the apps
 ln -s /srv/shiny-server/CurriculaTable.csv /srv/shiny-server/Personalized-Learning-Plan/CurriculaTable.csv
-ln -s /srv/shiny-server/ModuleTable.csv /srv/shiny-server/Personalized-Learning-Plan/ModuleTable.csv
 ln -s /srv/shiny-server/CurriculaTable.csv /srv/shiny-server/Lesson-Generator/CurriculaTable.csv
-ln -s /srv/shiny-server/ModuleTable.csv  /srv/shiny-server/Lesson-Generator/ModuleTable.csv
 ln -s /srv/shiny-server/CurriculaTable.csv /srv/shiny-server/list/CurriculaTable.csv
-ln -s /srv/shiny-server/ModuleTable.csv  /srv/shiny-server/list/ModuleTable.csv
+ln -s /srv/shiny-server/ModuleTable/ModuleTable.csv /srv/shiny-server/Personalized-Learning-Plan/ModuleTable.csv
+ln -s /srv/shiny-server/ModuleTable/ModuleTable.csv /srv/shiny-server/Lesson-Generator/ModuleTable.csv
+ln -s /srv/shiny-server/ModuleTable/ModuleTable.csv /srv/shiny-server/list/ModuleTable.csv
 
 #Finalize file permissions
 sudo chown -R shiny:shiny /srv/shiny-server/
