@@ -54,6 +54,9 @@ sudo firewall-cmd --reload
 #Move to shiny server file location and remove default files
 cd /srv/shiny-server/
 rm -fr /srv/shiny-server/*
+git clone git@github.com:braunsb/Lessons.git
+link -s /srv/shiny-server/Lessons/* /srv/shiny-server
+git clone git@github.com:ianmcampbell/ModuleTable.git
 
 #Download the Personalized Lesson Plan app from Github
 curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Support-System/tar.gz/master | tar -C /srv/shiny-server/ -xz --strip=1 Arcus-Modular-Education-Support-System-master/Personalized-Learning-Plan
@@ -74,8 +77,6 @@ curl https://codeload.github.com/braunsb/Lessons/tar.gz/master | tar -C /srv/shi
 #Download the Curricula and Module Tables from Github
 #curl https://codeload.github.com/braunsb/Lessons/tar.gz/master | tar -C /srv/shiny-server/ -xz --strip=1 Lessons-master/ModuleTable.csv
 curl https://codeload.github.com/ianmcampbell/Curricula/tar.gz/master | tar -C /srv/shiny-server/ -xz --strip=1 Curricula-master/CurriculaTable.csv
-cd /srv/shiny-server/
-git clone git@github.com:ianmcampbell/ModuleTable.git
 
 #Download the Curricula from Github
 curl https://codeload.github.com/ianmcampbell/Curricula/tar.gz/master | tar -C /srv/shiny-server/Personalized-Learning-Plan/curricula/ -xz --strip=1 Curricula-master/
