@@ -51,7 +51,7 @@ RUN chmod 700 /home/shiny/.ssh/id_rsa
 
 #Clone Lesson and ModuleTable repos
 RUN cd /srv/shiny-server/
-RUN git clone git@github.com:braunsb/Lessons.git /srv/shiny-server/Lessons/
+RUN git clone git@github.com:arcus/ALEx-Lessons.git /srv/shiny-server/Lessons/
 #Symbolically link apps into top level directory for service
 RUN ln -s /srv/shiny-server/Lessons/* /srv/shiny-server
 RUN git clone git@github.com:ianmcampbell/ModuleTable.git /srv/shiny-server/ModuleTable/
