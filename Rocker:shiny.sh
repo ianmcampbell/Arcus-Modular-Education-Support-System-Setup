@@ -40,6 +40,8 @@ USER shiny
 #Add github.com known hosts
 RUN mkdir ~/.ssh/
 RUN ssh-keyscan github.com >> ~/.ssh/known_hosts
+RUN git config --global user.email "a-mess-bot@a-mess.org"
+RUN git config --global user.name "a-mess-bot"
 
 #Import SSH private key
 ADD --chown=shiny:shiny id_rsa /home/shiny/.ssh/id_rsa
@@ -60,7 +62,6 @@ RUN curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Suppor
 RUN curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Support-System/tar.gz/master | tar -C /srv/shiny-server/ -xz --strip=1 Arcus-Modular-Education-Support-System-master/list
 RUN curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Support-System/tar.gz/master | tar -C /srv/shiny-server/ -xz --strip=1 Arcus-Modular-Education-Support-System-master/TableUpdater
 RUN curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Support-System/tar.gz/master | tar -C /srv/shiny-server/ -xz --strip=1 Arcus-Modular-Education-Support-System-master/PackageManagement
-RUN curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Support-System/tar.gz/master | tar -C /srv/shiny-server/ -xz --strip=1 Arcus-Modular-Education-Support-System-master/index
 RUN curl https://codeload.github.com/ianmcampbell/Curricula/tar.gz/master | tar -C /srv/shiny-server/ -xz --strip=1 Curricula-master/CurriculaTable.csv
 
 #Import curricula
@@ -85,5 +86,6 @@ CMD ["/usr/bin/shiny-server.sh"]
 #docker save <image> | bzip2 > rocker-verse-amess.tar.bz2
 #bzip2 -d rocker-verse-amess.tar.gz
 #docker load -i rocker-verse-amess.tar
+#docker images
 #docker run -d -p 3838:3838 <image>
 
