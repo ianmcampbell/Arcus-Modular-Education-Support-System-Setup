@@ -12,8 +12,8 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
    python \
    git \
    nano
-   
-#Prepare Java Path for rJava install for RJDBC    
+
+#Prepare Java Path for rJava install for RJDBC
 ENV LD_LIBRARY_PATH=/usr/lib/jvm/jre/lib/amd64:/usr/lib/jvm/jre/lib/amd64/default
 
 #Prepair rJava install
@@ -62,6 +62,7 @@ RUN curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Suppor
 RUN curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Support-System/tar.gz/master | tar -C /srv/shiny-server/ -xz --strip=1 Arcus-Modular-Education-Support-System-master/list
 RUN curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Support-System/tar.gz/master | tar -C /srv/shiny-server/ -xz --strip=1 Arcus-Modular-Education-Support-System-master/TableUpdater
 RUN curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Support-System/tar.gz/master | tar -C /srv/shiny-server/ -xz --strip=1 Arcus-Modular-Education-Support-System-master/PackageManagement
+RUN curl https://codeload.github.com/ianmcampbell/Arcus-Modular-Education-Support-System/tar.gz/master | tar -C /srv/shiny-server/ -xz --strip=1 Arcus-Modular-Education-Support-System-master/Catalog
 RUN curl https://codeload.github.com/ianmcampbell/Curricula/tar.gz/master | tar -C /srv/shiny-server/ -xz --strip=1 Curricula-master/CurriculaTable.csv
 
 #Import curricula
@@ -76,7 +77,7 @@ RUN ln -s /srv/shiny-server/ModuleTable/ModuleTable.csv /srv/shiny-server/Person
 RUN ln -s /srv/shiny-server/ModuleTable/ModuleTable.csv /srv/shiny-server/Lesson-Generator/ModuleTable.csv
 RUN ln -s /srv/shiny-server/ModuleTable/ModuleTable.csv /srv/shiny-server/list/ModuleTable.csv
 
-#Expose default shiny-server port 
+#Expose default shiny-server port
 EXPOSE 3838
 
 #Set entry for container as shiny-server binary
@@ -88,4 +89,3 @@ CMD ["/usr/bin/shiny-server.sh"]
 #docker load -i rocker-verse-amess.tar
 #docker images
 #docker run -d -p 3838:3838 <image>
-
