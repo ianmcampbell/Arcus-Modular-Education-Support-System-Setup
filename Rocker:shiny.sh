@@ -21,7 +21,8 @@ RUN R CMD javareconf
 
 #Install packages
 RUN R -e "install.packages('RCurl')"
-RUN R -e "install.packages('learnr')"
+#RUN R -e "install.packages('learnr')"
+RUN R -e "devtools::install_github('zoews/learnr')"
 RUN R -e "install.packages('RJDBC')"
 RUN R -e "install.packages('pwr')"
 RUN R -e "install.packages('shinyjqui')"
