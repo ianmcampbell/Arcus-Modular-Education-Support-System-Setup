@@ -23,6 +23,9 @@ RUN R CMD javareconf
 RUN R -e "install.packages('RCurl')"
 #RUN R -e "install.packages('learnr')"
 RUN R -e "devtools::install_github('zoews/learnr')"
+#add extra dependencies for learnr fork to run Python, SQL
+RUN R -e "install.packages('reticulate')"
+RUN R -e "install.packages('RSQLite')"
 RUN R -e "install.packages('RJDBC')"
 RUN R -e "install.packages('pwr')"
 RUN R -e "install.packages('shinyjqui')"
